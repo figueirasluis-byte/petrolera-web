@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "descuento": "15%",
+    "nombre": "Combo de Seguridad",
+    "descripcion": "Incluye: Rig Pass, H2S y Primeros Auxilios. El pase de acceso indispensable para la industria.",
+    "wa": "Hola, me interesa el Combo de Seguridad con 15% de descuento"
+  },
+  {
+    "id": 2,
+    "descuento": "15%",
+    "nombre": "Combo Supervisor de Permiso",
+    "descripcion": "Incluye: Signatario, Verificador de Gas y AST. Capacitación integral para actividades riesgosas.",
+    "wa": "Hola, me interesa el Combo Supervisor de Permiso"
+  },
+  {
+    "id": 3,
+    "descuento": "15%",
+    "nombre": "Combo Líderes de Pozo",
+    "descripcion": "Incluye: Wellsharp Introductorio, Rig Pass, H2S y ACR. Avalado por IADC.",
+    "wa": "Hola, me interesa el Combo Líderes de Pozo"
+  },
+  {
+    "id": 4,
+    "descuento": "10%",
+    "nombre": "Pack 27 Cursos SSPA",
+    "descripcion": "27 constancias DC-3 y credencial de signatario. Descuento exclusivo en línea.",
+    "wa": "Hola, me interesa el Pack 27 Cursos SSPA"
+  },
+  {
+    "id": 5,
+    "descuento": "15%",
+    "nombre": "Pack Maniobrista",
+    "descripcion": "Incluye 3 constancias, 3 DC-3 y credencial de trabajos en altura.",
+    "wa": "Hola, me interesa el Pack Maniobrista"
+  },
+  {
+    "id": 6,
+    "descuento": "↗",
+    "nombre": "Libreta de Mar",
+    "descripcion": "Obtén tu libreta de mar en el menor tiempo posible para subir a plataforma.",
+    "wa": "Hola, quiero información sobre la Libreta de Mar"
+  }
+]

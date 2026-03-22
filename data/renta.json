@@ -1,0 +1,7 @@
+[
+  { "id": 1, "nombre": "Camiones Grúa (Hiab)",        "desc": "Versatilidad para carga, descarga y montaje en sitio.",      "imagen": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=70", "wa": "Hola, quiero cotizar renta de Camión Grúa Hiab" },
+  { "id": 2, "nombre": "Montacargas Industriales",     "desc": "Eficiencia y potencia para manejo de carga en almacén.",     "imagen": "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=70", "wa": "Hola, quiero cotizar renta de Montacargas" },
+  { "id": 3, "nombre": "Plataformas Manlift",          "desc": "Acceso seguro a alturas para mantenimiento y obra.",         "imagen": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=70", "wa": "Hola, quiero cotizar renta de Manlift" },
+  { "id": 4, "nombre": "Grúas Móviles Telescópicas",  "desc": "Alta capacidad de izaje certificada para proyectos pesados.", "imagen": "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=500&q=70", "wa": "Hola, quiero cotizar renta de Grúa Telescópica" },
+  { "id": 5, "nombre": "Andamios Direccionales",       "desc": "Estructuras modulares seguras y de rápido montaje.",         "imagen": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=70", "wa": "Hola, quiero cotizar renta de Andamios" }
+]

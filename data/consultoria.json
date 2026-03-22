@@ -1,0 +1,9 @@
+[
+  { "id": 1, "codigo": "SSPA",      "nombre": "Carpeta Anexo SSPA PEMEX" },
+  { "id": 2, "codigo": "ISO 9001",  "nombre": "Sistema de Gestión de Calidad 2015" },
+  { "id": 3, "codigo": "ISO 14001", "nombre": "Gestión Ambiental 2015" },
+  { "id": 4, "codigo": "ISO 45001", "nombre": "Seguridad y Salud en el Trabajo 2018" },
+  { "id": 5, "codigo": "ISO 31000", "nombre": "Gestión de Riesgos 2018" },
+  { "id": 6, "codigo": "ISO 37001", "nombre": "Sistemas Antisoborno 2025" },
+  { "id": 7, "codigo": "P. CIVIL",  "nombre": "Programa Interno de Protección Civil" }
+]

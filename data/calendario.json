@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "tag": "IADC",
+    "titulo": "Rig Pass",
+    "imagen": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80",
+    "wa": "Hola, quiero inscribirme al curso de Rig Pass"
+  },
+  {
+    "id": 2,
+    "tag": "IADC",
+    "titulo": "Wellsharp",
+    "imagen": "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=500&q=80",
+    "wa": "Hola, quiero información sobre Wellsharp"
+  },
+  {
+    "id": 3,
+    "tag": "STPS",
+    "titulo": "Paquete Signatario",
+    "imagen": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&q=80",
+    "wa": "Hola, me interesa el Paquete Signatario"
+  },
+  {
+    "id": 4,
+    "tag": "STCW",
+    "titulo": "Libreta de Mar Tipo A y D",
+    "imagen": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&q=80",
+    "wa": "Hola, quiero información sobre la Libreta de Mar"
+  }
+]

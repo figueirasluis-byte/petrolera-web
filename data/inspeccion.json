@@ -1,0 +1,10 @@
+[
+  { "id": 1, "icono": "🏗️", "nombre": "Grúa Titán (Boom Truck)",    "desc": "Inspección de pluma telescópica sobre camión comercial." },
+  { "id": 2, "icono": "🚜", "nombre": "Grúa Todo Terreno (RT)",      "desc": "Para terrenos difíciles y maniobras en pozos." },
+  { "id": 3, "icono": "🦾", "nombre": "Grúa Articulada (Hiab)",      "desc": "Revisión de sistema hidráulico de carga y descarga." },
+  { "id": 4, "icono": "🏭", "nombre": "Montacargas Industrial",       "desc": "Pruebas de carga y revisión de mástil." },
+  { "id": 5, "icono": "⬆️", "nombre": "Grúa Canastilla",              "desc": "Certificación de seguridad para elevación de personal." },
+  { "id": 6, "icono": "🔩", "nombre": "Grúa Telescópica",             "desc": "Verificación estructural de secciones de pluma." },
+  { "id": 7, "icono": "🚧", "nombre": "Retroexcavadora",               "desc": "Inspección de cucharón frontal y brazo trasero." },
+  { "id": 8, "icono": "🏗",  "nombre": "Grúa de Celosía",              "desc": "Inspección de estructura reticular para alto tonelaje." }
+]

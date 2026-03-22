@@ -1,0 +1,14 @@
+[
+  { "id": 1, "codigo": "EC0217", "nombre": "Impartición de Cursos de Formación",         "desc": "Certificación para instructores que imparten cursos de formación presencial." },
+  { "id": 2, "codigo": "EC0288", "nombre": "Operación de Montacargas Vertical",           "desc": "Operación segura y mantenimiento preventivo de montacargas." },
+  { "id": 3, "codigo": "EC0307", "nombre": "Atención Prehospitalaria Básica",             "desc": "Soporte básico de vida ante urgencias médicas en el trabajo." },
+  { "id": 4, "codigo": "EC0397", "nombre": "Vigilancia de Seguridad y Salud",             "desc": "Cumplimiento de normativas de seguridad por líderes de equipo." },
+  { "id": 5, "codigo": "EC0449", "nombre": "Gestión de Servicios Preventivos SST",        "desc": "Administración y diagnóstico integral de servicios preventivos." },
+  { "id": 6, "codigo": "EC0531", "nombre": "Operación de Grúa Móvil",                     "desc": "Operación segura de grúas móviles para izaje de carga." },
+  { "id": 7, "codigo": "EC0532", "nombre": "Operación de Vehículo de Emergencia",         "desc": "Operación segura de vehículos de emergencia y rescate." },
+  { "id": 8, "codigo": "EC0591", "nombre": "Trabajo en Altura con Andamios",              "desc": "Operación segura en altura con andamios tipo torre." },
+  { "id": 9, "codigo": "EC0635", "nombre": "Soldadura SMAW",                              "desc": "Ejecución de trabajos de soldadura con arco metálico protegido." },
+  { "id": 10,"codigo": "EC0685", "nombre": "Control de Factores de Riesgo Ergonómico",   "desc": "Detección y prevención de riesgos ergonómicos laborales." },
+  { "id": 11,"codigo": "EC1092", "nombre": "Coordinación de Protección Civil",            "desc": "Implementación de brigadas y procedimientos del Programa Interno." },
+  { "id": 12,"codigo": "EC0616", "nombre": "Auxiliar de Enfermería Básica",               "desc": "Cuidados básicos de enfermería y orientación a pacientes." }
+]
