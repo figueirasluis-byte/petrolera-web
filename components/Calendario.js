@@ -35,8 +35,8 @@ export default function Calendario() {
               <div className="p-5">
                 <h3 className="font-bold text-lg mb-4" style={{color: '#0d2b1a'}}>{c.titulo}</h3>
                 <a href={getWhatsAppLink(c.wa)} target="_blank" rel="noopener noreferrer"
-                  className="w-full block text-center text-white font-semibold text-sm py-3 rounded-xl transition-colors hover:bg-orange-500"
-                  style={{background: '#0d2b1a'}}>
+                  className="w-full block text-center text-white font-semibold text-sm py-3 rounded-xl transition-colors hover:bg-green-600"
+                  style={{background: '#1a4731'}}>
                   Registro →
                 </a>
               </div>

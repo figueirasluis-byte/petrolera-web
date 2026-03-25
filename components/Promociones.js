@@ -11,9 +11,7 @@ export default function Promociones() {
             <span className="w-2 h-2 rounded-full animate-pulse-dot" style={{background: '#22c55e'}} />
             <span className="text-xs font-bold tracking-widest uppercase" style={{color: '#1a4731'}}>Catálogo de Ofertas</span>
           </div>
-          <h2 className="font-black text-5xl" style={{color: '#0d2b1a', letterSpacing: '-1px'}}>
-            Promociones
-          </h2>
+          <h2 className="font-black text-5xl" style={{color: '#0d2b1a', letterSpacing: '-1px'}}>Promociones</h2>
           <p className="font-black text-3xl mt-1" style={{color: '#22c55e'}}>DEL 1 AL 31 DE MARZO</p>
           <p className="mt-2" style={{color: '#4b7a5e'}}>Amplía tus oportunidades de trabajo con nuestras ofertas de capacitación.</p>
         </div>
@@ -29,7 +27,7 @@ export default function Promociones() {
               <h3 className="font-bold text-lg mb-2" style={{color: '#0d2b1a'}}>{p.nombre}</h3>
               <p className="text-sm leading-relaxed mb-6" style={{color: '#4b7a5e'}}>{p.descripcion}</p>
               <a href={getWhatsAppLink(p.wa)} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 font-bold text-sm transition-all"
+                className="inline-flex items-center gap-1 font-bold text-sm transition-all hover:text-green-700"
                 style={{color: '#1a4731'}}>
                 VIGENCIA 01 AL 31 DE MARZO →
               </a>

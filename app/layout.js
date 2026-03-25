@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Delta Oil Services — Capacitación Industrial Petrolera',
-  description: 'Cursos SSPA, Rig Pass, Wellsharp, inspección de grúas y más en Villahermosa, Tabasco.',
+  title: 'GREEN PRO — Consultoría Ambiental y Capacitación SSPA',
+  description: 'Cursos SSPA, Rig Pass, Protección Ambiental, Normas STPS y más. Villahermosa, Tabasco.',
 }
 
 export default function RootLayout({ children }) {
