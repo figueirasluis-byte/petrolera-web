@@ -1,13 +1,10 @@
 'use client'
-import { useState } from 'react'
 import { getWhatsAppLink } from '../utils/whatsapp'
 
 const grupos = [
   {
     id: 'sspa',
-    titulo: 'SSPA',
-    tituloCompleto: 'Cursos de Capacitación en SSPA',
-    icono: '🛡️',
+    titulo: 'Cursos de Capacitación en SSPA',
     cursos: [
       { nombre: 'Sistema de Permisos para Trabajo con Riesgo', horas: 8 },
       { nombre: 'Auditorías Efectivas', horas: 8 },
@@ -41,9 +38,7 @@ const grupos = [
   },
   {
     id: 'ambiental',
-    titulo: 'Ambiental',
-    tituloCompleto: 'Capacitación en Protección Ambiental',
-    icono: '🌿',
+    titulo: 'Capacitación en Protección Ambiental',
     cursos: [
       { nombre: 'Ley General para la Prevención y Gestión Integral de los Residuos', horas: 8 },
       { nombre: 'Administración Ambiental', horas: 8 },
@@ -62,9 +57,7 @@ const grupos = [
   },
   {
     id: 'normas',
-    titulo: 'Normas STPS',
-    tituloCompleto: 'Cursos de Normas STPS',
-    icono: '📋',
+    titulo: 'Cursos de Normas STPS',
     cursos: [
       { nombre: 'NOM-001-STPS-2008 — Edificios, Locales e Instalaciones en Centros de Trabajo', horas: 10 },
       { nombre: 'NOM-002-STPS-2010 — Prevención y Protección contra Incendios', horas: 10 },
@@ -81,9 +74,7 @@ const grupos = [
   },
   {
     id: 'brigadas',
-    titulo: 'Brigadas',
-    tituloCompleto: 'Cursos de Brigadas de Emergencia',
-    icono: '🚨',
+    titulo: 'Cursos de Brigadas de Emergencia',
     cursos: [
       { nombre: 'Brigada de Búsqueda y Rescate', horas: 4 },
       { nombre: 'Brigada de Evacuación', horas: 4 },
@@ -94,9 +85,7 @@ const grupos = [
   },
   {
     id: 'especializados',
-    titulo: 'Especializados',
-    tituloCompleto: 'Cursos Especializados',
-    icono: '⭐',
+    titulo: 'Cursos Especializados',
     cursos: [
       { nombre: 'Armado y Desmantelado en Andamios Atlas', horas: 8 },
       { nombre: 'Bloqueo y Etiquetado — Lock Out, Tag Out', horas: 8 },
@@ -111,87 +100,76 @@ const grupos = [
 ]
 
 export default function CursosGreenPro() {
-  const [tabActivo, setTabActivo] = useState('sspa')
-  const grupoActivo = grupos.find(g => g.id === tabActivo)
-
   return (
-    <section id="cursos" className="bg-[#f8faff] py-20 px-6">
+    <section id="cursos" className="bg-[#f8faff] py-20">
       <div className="max-w-7xl mx-auto">
 
-        {/* Logo + Encabezado */}
-        <div className="text-center mb-12">
+        {/* Encabezado general */}
+        <div className="text-center mb-16 px-6">
           <img
             src="/Green_Pro_Logo.jpg"
             alt="GREEN PRO"
-            className="h-20 mx-auto mb-6 object-contain rounded-xl"
+            className="h-16 mx-auto mb-6 object-contain rounded-xl"
           />
-          <div className="inline-flex items-center gap-2 border border-gray-200 rounded-full px-4 py-1.5 mb-4">
-            <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse-dot" />
-            <span className="text-xs font-semibold tracking-widest uppercase text-gray-500">Catálogo Oficial GREEN PRO</span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-black text-[#1a2744] mb-3">
-            {grupoActivo.tituloCompleto}
-          </h2>
-          <p className="text-gray-500 max-w-xl mx-auto">
+          <p className="text-gray-500 max-w-xl mx-auto text-base">
             Selecciona una categoría y solicita información directo por WhatsApp.
           </p>
         </div>
 
-        {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {grupos.map(g => (
-            <button
-              key={g.id}
-              onClick={() => setTabActivo(g.id)}
-              className={`flex items-center gap-2 px-5 py-3 rounded-full font-bold text-sm transition-all border-2 ${
-                tabActivo === g.id
-                  ? 'bg-[#1a2744] text-white border-[#1a2744] shadow-lg scale-105'
-                  : 'bg-white text-[#1a2744] border-gray-200 hover:border-orange-400 hover:text-orange-500'
-              }`}>
-              <span>{g.icono}</span>
-              <span>{g.titulo}</span>
-              <span className={`text-xs px-2 py-0.5 rounded-full font-black ${
-                tabActivo === g.id ? 'bg-orange-500 text-white' : 'bg-orange-100 text-orange-500'
-              }`}>
-                {g.cursos.length}
-              </span>
-            </button>
-          ))}
-        </div>
+        {/* Grupos en vertical */}
+        <div className="flex flex-col gap-20">
+          {grupos.map((grupo, gi) => (
+            <div key={grupo.id}>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {grupoActivo.cursos.map((curso, i) => (
-            <div key={i}
-              className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all p-6 flex flex-col justify-between group">
-              <div>
-                <div className="inline-block bg-orange-50 text-orange-500 font-black text-2xl px-4 py-1.5 rounded-xl mb-4">
-                  {curso.horas} HRS
-                </div>
-                <h3 className="font-bold text-[#1a2744] text-base leading-snug">
-                  {curso.nombre}
-                </h3>
+              {/* Título del grupo */}
+              <div className="px-6 mb-6">
+                <h2 className="text-3xl md:text-5xl font-black text-[#1a2744]">
+                  {grupo.titulo}
+                </h2>
+                <div className="w-16 h-1 bg-orange-500 rounded-full mt-3" />
               </div>
-              <a
-                href={getWhatsAppLink(`Hola, quiero información y cotización del curso: ${curso.nombre} (${curso.horas} hrs)`)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 block w-full text-center bg-[#1a2744] hover:bg-orange-500 text-white font-semibold text-sm py-3 rounded-xl transition-colors">
-                Solicitar info →
-              </a>
+
+              {/* Cards en scroll horizontal */}
+              <div className="flex gap-5 overflow-x-auto scrollbar-hide px-6 pb-4">
+                {grupo.cursos.map((curso, i) => (
+                  <div key={i}
+                    className="flex-none w-64 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all p-6 flex flex-col justify-between group">
+                    <div>
+                      <div className="inline-block bg-orange-50 text-orange-500 font-black text-xl px-4 py-1.5 rounded-xl mb-4">
+                        {curso.horas} HRS
+                      </div>
+                      <h3 className="font-bold text-[#1a2744] text-sm leading-snug">
+                        {curso.nombre}
+                      </h3>
+                    </div>
+                    <a
+                      href={getWhatsAppLink(`Hola, quiero información y cotización del curso: ${curso.nombre} (${curso.horas} hrs)`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 block w-full text-center bg-[#1a2744] hover:bg-orange-500 text-white font-semibold text-sm py-3 rounded-xl transition-colors">
+                      Solicitar info →
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              {/* Botón cotizar grupo */}
+              <div className="px-6 mt-6">
+                <a
+                  href={getWhatsAppLink(`Hola, quiero cotizar el grupo completo de: ${grupo.titulo}`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold px-6 py-3 rounded-full transition-all text-sm">
+                  Cotizar grupo completo →
+                </a>
+              </div>
+
+              {/* Divisor entre grupos */}
+              {gi < grupos.length - 1 && (
+                <div className="mx-6 mt-16 border-t border-gray-200" />
+              )}
             </div>
           ))}
-        </div>
-
-        {/* Botón grupo completo */}
-        <div className="text-center mt-10">
-          <a
-            href={getWhatsAppLink(`Hola, quiero cotizar el grupo completo de: ${grupoActivo.tituloCompleto}`)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold px-8 py-4 rounded-full transition-all text-base">
-            Cotizar grupo completo: {grupoActivo.titulo} →
-          </a>
         </div>
 
       </div>
