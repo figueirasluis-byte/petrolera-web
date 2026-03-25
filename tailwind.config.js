@@ -7,17 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        verde: {
-          oscuro: '#0d2b1a',
-          medio: '#1a4731',
-          vivo: '#22c55e',
-          suave: '#dcfce7',
-        }
-      },
       fontFamily: {
-        display: ['Syne', 'sans-serif'],
-        body: ['DM Sans', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
       },
       animation: {
         'marquee': 'marquee 20s linear infinite',
