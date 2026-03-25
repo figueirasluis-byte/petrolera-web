@@ -7,17 +7,23 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
 
           <div>
-            <div className="font-black text-xl mb-4">
-              DELTA <span className="text-orange-500">OIL SERVICES</span>
+            {/* Logo GREEN PRO */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 inline-block mb-4 border border-white/20">
+              <img
+                src="/Green_Pro_Logo.jpg"
+                alt="GREEN PRO"
+                className="h-12 w-auto object-contain rounded-xl"
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Líderes en capacitación, certificación, inspección y renta de equipos
-              para el sector industrial y petrolero de Villahermosa, Tabasco.
+              Consultoría ambiental y capacitación en SSPA para el sector industrial
+              y petrolero. Villahermosa, Tabasco.
             </p>
             <div className="flex flex-col gap-3 text-sm text-white/60">
               <span>📍 Villahermosa, Tabasco, México</span>
-              <a href="mailto:contacto@deltatraining.mx" className="hover:text-orange-400 transition-colors">
-                ✉️ contacto@deltatraining.mx
+              <a href="mailto:greenproconsultoriaambiental@gmail.com"
+                className="hover:text-orange-400 transition-colors">
+                ✉️ greenproconsultoriaambiental@gmail.com
               </a>
               <a href={getWhatsAppLink("Hola, necesito información")}
                 target="_blank" rel="noopener noreferrer"
@@ -34,7 +40,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {[
                 ['Capacitación Presencial', '#calendario'],
-                ['Cursos E-Learning', '#cursos'],
+                ['Catálogo de Cursos SSPA', '#cursos'],
                 ['Inspección de Grúas', '#inspeccion'],
                 ['Estándares CONOCER', '#conocer'],
                 ['Consultoría ISO', '#consultoria'],
@@ -52,12 +58,12 @@ export default function Footer() {
               ¿Listo para comenzar?
             </h4>
             <div className="flex flex-col gap-3">
-              <a href={getWhatsAppLink("Hola, quiero agendar una cita")}
+              <a href={getWhatsAppLink("Hola, quiero agendar una cita con GREEN PRO")}
                 target="_blank" rel="noopener noreferrer"
                 className="block text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-xl transition-colors">
                 Agendar Cita →
               </a>
-              <a href={getWhatsAppLink("Hola, quiero solicitar una cotización")}
+              <a href={getWhatsAppLink("Hola, quiero solicitar una cotización a GREEN PRO")}
                 target="_blank" rel="noopener noreferrer"
                 className="block text-center border border-white/20 hover:border-orange-400 hover:text-orange-400 text-white font-semibold py-3 rounded-xl transition-colors text-sm">
                 Solicitar Cotización
@@ -67,7 +73,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-6 border-t border-white/10">
-          <p className="text-white/30 text-xs">© 2026 DELTA OIL SERVICES. Todos los derechos reservados.</p>
+          <p className="text-white/30 text-xs">© 2026 GREEN PRO. Todos los derechos reservados.</p>
           <div className="flex gap-5">
             <a href="#" className="text-white/30 hover:text-orange-400 text-xs transition-colors">Aviso de Privacidad</a>
             <a href="#" className="text-white/30 hover:text-orange-400 text-xs transition-colors">Términos y Condiciones</a>
