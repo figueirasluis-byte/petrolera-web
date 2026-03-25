@@ -27,14 +27,13 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-        {/* Logo texto */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/30">
-            <span className="text-white font-black text-xs">GP</span>
-          </div>
-          <span className="text-white font-black text-xl tracking-tight">
-            GREEN <span className="text-green-400">PRO</span>
-          </span>
+        {/* Logo GREEN PRO imagen real */}
+        <a href="#" className="flex items-center">
+          <img
+            src="/logos/logo.jpg"
+            alt="GREEN PRO"
+            className="h-12 w-auto object-contain rounded-lg"
+          />
         </a>
 
         <ul className="hidden lg:flex items-center gap-8">
