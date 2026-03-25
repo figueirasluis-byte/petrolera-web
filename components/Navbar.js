@@ -26,19 +26,22 @@ export default function Navbar() {
         : 'bg-[#0f1e3c]/80 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="#" className="flex items-center">
-          <img
-            src="/Green_Pro_Logo.jpg"
-            alt="GREEN PRO"
-            className="h-14 w-auto object-contain rounded-xl hover:scale-105 transition-transform duration-300"
-          />
+
+        {/* Logo texto */}
+        <a href="#" className="flex items-center gap-2 group">
+          <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/30">
+            <span className="text-white font-black text-xs">GP</span>
+          </div>
+          <span className="text-white font-black text-xl tracking-tight">
+            GREEN <span className="text-green-400">PRO</span>
+          </span>
         </a>
 
         <ul className="hidden lg:flex items-center gap-8">
           {links.map(l => (
             <li key={l.href}>
               <a href={l.href}
-                className="text-white/80 hover:text-orange-400 text-sm font-semibold tracking-wide transition-colors">
+                className="text-white/80 hover:text-green-400 text-sm font-semibold tracking-wide transition-colors">
                 {l.label}
               </a>
             </li>
@@ -62,7 +65,7 @@ export default function Navbar() {
         <div className="lg:hidden bg-[#0f1e3c] border-t border-white/10 px-6 py-5 flex flex-col gap-4">
           {links.map(l => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)}
-              className="text-white/80 hover:text-orange-400 font-semibold text-sm py-1">
+              className="text-white/80 hover:text-green-400 font-semibold text-sm py-1">
               {l.label}
             </a>
           ))}

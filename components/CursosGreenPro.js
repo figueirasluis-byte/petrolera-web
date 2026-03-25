@@ -130,13 +130,16 @@ export default function CursosGreenPro() {
     <section id="cursos" className="bg-[#f8faff] py-20">
       <div className="max-w-7xl mx-auto">
 
-        {/* Encabezado */}
+        {/* Encabezado con logo en el cuerpo */}
         <div className="text-center mb-16 px-6">
           <img
             src="/Green_Pro_Logo.jpg"
             alt="GREEN PRO"
-            className="h-16 mx-auto mb-6 object-contain rounded-xl"
+            className="h-24 mx-auto mb-4 object-contain rounded-2xl shadow-md"
           />
+          <h2 className="text-3xl md:text-4xl font-black text-[#1a2744] mb-2">
+            Catálogo de Cursos <span className="text-green-600">GREEN PRO</span>
+          </h2>
           <p className="text-gray-500 max-w-xl mx-auto text-base">
             Selecciona el curso de tu interés y solicita información directo por WhatsApp.
           </p>
@@ -147,41 +150,35 @@ export default function CursosGreenPro() {
           {grupos.map((grupo, gi) => (
             <div key={grupo.id}>
 
-              {/* Título */}
-              <div className="px-6 mb-6">
+              {/* Título centrado */}
+              <div className="text-center px-6 mb-8">
                 <h2 className="text-3xl md:text-5xl font-black text-[#1a2744]">
                   {grupo.titulo}
                 </h2>
-                <div className="w-16 h-1 bg-orange-500 rounded-full mt-3" />
+                <div className="w-16 h-1 bg-orange-500 rounded-full mt-3 mx-auto" />
               </div>
 
-              {/* DOBLE FILA — grupos grandes */}
+              {/* DOBLE FILA */}
               {grupo.doble ? (
                 <div className="overflow-x-auto scrollbar-hide px-6 pb-4">
                   <div className="flex flex-col gap-4" style={{ width: 'max-content' }}>
-                    {/* Fila 1 — indices pares */}
                     <div className="flex gap-4">
-                      {grupo.cursos
-                        .filter((_, i) => i % 2 === 0)
-                        .map((curso, i) => <Card key={i} curso={curso} />)}
+                      {grupo.cursos.filter((_, i) => i % 2 === 0).map((curso, i) => <Card key={i} curso={curso} />)}
                     </div>
-                    {/* Fila 2 — indices impares */}
                     <div className="flex gap-4">
-                      {grupo.cursos
-                        .filter((_, i) => i % 2 !== 0)
-                        .map((curso, i) => <Card key={i} curso={curso} />)}
+                      {grupo.cursos.filter((_, i) => i % 2 !== 0).map((curso, i) => <Card key={i} curso={curso} />)}
                     </div>
                   </div>
                 </div>
               ) : (
-                /* FILA SIMPLE — grupos pequeños */
+                /* FILA SIMPLE */
                 <div className="flex gap-4 overflow-x-auto scrollbar-hide px-6 pb-4">
                   {grupo.cursos.map((curso, i) => <Card key={i} curso={curso} />)}
                 </div>
               )}
 
-              {/* Botón cotizar grupo */}
-              <div className="px-6 mt-6">
+              {/* Botón cotizar grupo - centrado */}
+              <div className="text-center mt-6">
                 <a
                   href={getWhatsAppLink(`Hola, quiero cotizar el grupo completo de: ${grupo.titulo}`)}
                   target="_blank"
@@ -191,7 +188,6 @@ export default function CursosGreenPro() {
                 </a>
               </div>
 
-              {/* Divisor */}
               {gi < grupos.length - 1 && (
                 <div className="mx-6 mt-16 border-t border-gray-200" />
               )}
