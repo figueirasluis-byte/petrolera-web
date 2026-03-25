@@ -14,44 +14,42 @@ export default function Cotizacion() {
   }
 
   return (
-    <section className="bg-white py-20 px-6">
+    <section className="py-20 px-6" style={{background: '#0d2b1a'}}>
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
-          <img
-            src="/logos/logo.jpg"
-            alt="GREEN PRO"
-            className="h-16 mx-auto mb-5 object-contain rounded-xl"
-          />
-          <h2 className="text-4xl font-black text-[#1a2744]">
-            Contáctanos — <span className="text-green-600">GREEN PRO</span>
+          <h2 className="font-display font-black text-4xl text-white mb-2" style={{letterSpacing: '-1px'}}>
+            Contáctanos — <span style={{color: '#22c55e'}}>GREEN PRO</span>
           </h2>
-          <p className="text-gray-500 mt-2">Completa el formulario y te contactamos en menos de 2 horas.</p>
+          <p style={{color: 'rgba(255,255,255,0.4)'}}>Completa el formulario y te contactamos en menos de 2 horas.</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-[#f8faff] rounded-2xl border border-gray-100 p-8 shadow-sm flex flex-col gap-5">
+        <form onSubmit={handleSubmit} className="rounded-2xl p-8 flex flex-col gap-5"
+          style={{background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(34,197,94,0.2)'}}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block mb-2">Nombre *</label>
+              <label className="text-xs font-bold uppercase tracking-wide block mb-2" style={{color: 'rgba(255,255,255,0.4)'}}>Nombre *</label>
               <input name="nombre" required placeholder="Tu nombre"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-400 bg-white" />
+                className="w-full rounded-xl px-4 py-3 text-sm text-white outline-none placeholder:text-white/20"
+                style={{background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(34,197,94,0.2)'}} />
             </div>
             <div>
-              <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block mb-2">Teléfono *</label>
+              <label className="text-xs font-bold uppercase tracking-wide block mb-2" style={{color: 'rgba(255,255,255,0.4)'}}>Teléfono *</label>
               <input name="telefono" required placeholder="+52 993..."
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-400 bg-white" />
+                className="w-full rounded-xl px-4 py-3 text-sm text-white outline-none placeholder:text-white/20"
+                style={{background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(34,197,94,0.2)'}} />
             </div>
           </div>
-
           <div>
-            <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block mb-2">Empresa</label>
+            <label className="text-xs font-bold uppercase tracking-wide block mb-2" style={{color: 'rgba(255,255,255,0.4)'}}>Empresa</label>
             <input name="empresa" placeholder="Nombre de tu empresa (opcional)"
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-400 bg-white" />
+              className="w-full rounded-xl px-4 py-3 text-sm text-white outline-none placeholder:text-white/20"
+              style={{background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(34,197,94,0.2)'}} />
           </div>
-
           <div>
-            <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block mb-2">Servicio de Interés *</label>
+            <label className="text-xs font-bold uppercase tracking-wide block mb-2" style={{color: 'rgba(255,255,255,0.4)'}}>Servicio de Interés *</label>
             <select name="servicio" required
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-400 bg-white text-gray-600">
+              className="w-full rounded-xl px-4 py-3 text-sm outline-none"
+              style={{background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(34,197,94,0.2)', color: 'rgba(255,255,255,0.6)'}}>
               <option value="">Selecciona...</option>
               <option>Cursos SSPA / Rig Pass / Wellsharp</option>
               <option>Capacitación en Protección Ambiental</option>
@@ -62,15 +60,15 @@ export default function Cotizacion() {
               <option>Estándares CONOCER</option>
             </select>
           </div>
-
           <div>
-            <label className="text-xs font-bold text-gray-500 uppercase tracking-wide block mb-2">Mensaje</label>
+            <label className="text-xs font-bold uppercase tracking-wide block mb-2" style={{color: 'rgba(255,255,255,0.4)'}}>Mensaje</label>
             <textarea name="mensaje" rows={3} placeholder="Cuéntanos qué necesitas..."
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-400 bg-white resize-none" />
+              className="w-full rounded-xl px-4 py-3 text-sm text-white outline-none resize-none placeholder:text-white/20"
+              style={{background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(34,197,94,0.2)'}} />
           </div>
-
           <button type="submit"
-            className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 rounded-xl transition-colors mt-2 text-base">
+            className="w-full text-white font-bold py-4 rounded-xl transition-all mt-2 text-base hover:-translate-y-0.5"
+            style={{background: '#f97316', boxShadow: '0 8px 24px rgba(249,115,22,0.3)'}}>
             Enviar Solicitud por WhatsApp →
           </button>
         </form>

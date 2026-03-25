@@ -2,9 +2,7 @@ import { getWhatsAppLink } from '../utils/whatsapp'
 
 const grupos = [
   {
-    id: 'sspa',
-    titulo: 'Cursos de Capacitación en SSPA',
-    doble: true,
+    id: 'sspa', titulo: 'Cursos de Capacitación en SSPA', doble: true,
     cursos: [
       { nombre: 'Sistema de Permisos para Trabajo con Riesgo', horas: 8 },
       { nombre: 'Auditorías Efectivas', horas: 8 },
@@ -37,9 +35,7 @@ const grupos = [
     ],
   },
   {
-    id: 'ambiental',
-    titulo: 'Capacitación en Protección Ambiental',
-    doble: true,
+    id: 'ambiental', titulo: 'Capacitación en Protección Ambiental', doble: true,
     cursos: [
       { nombre: 'Ley General para la Prevención y Gestión Integral de los Residuos', horas: 8 },
       { nombre: 'Administración Ambiental', horas: 8 },
@@ -57,11 +53,9 @@ const grupos = [
     ],
   },
   {
-    id: 'normas',
-    titulo: 'Cursos de Normas STPS',
-    doble: true,
+    id: 'normas', titulo: 'Cursos de Normas STPS', doble: true,
     cursos: [
-      { nombre: 'NOM-001-STPS-2008 — Edificios, Locales e Instalaciones en Centros de Trabajo', horas: 10 },
+      { nombre: 'NOM-001-STPS-2008 — Edificios, Locales e Instalaciones', horas: 10 },
       { nombre: 'NOM-002-STPS-2010 — Prevención y Protección contra Incendios', horas: 10 },
       { nombre: 'NOM-006-STPS-2014', horas: 8 },
       { nombre: 'NOM-009-STPS-2011 — Trabajos en Alturas', horas: 16 },
@@ -75,9 +69,7 @@ const grupos = [
     ],
   },
   {
-    id: 'brigadas',
-    titulo: 'Cursos de Brigadas de Emergencia',
-    doble: false,
+    id: 'brigadas', titulo: 'Cursos de Brigadas de Emergencia', doble: false,
     cursos: [
       { nombre: 'Brigada de Búsqueda y Rescate', horas: 4 },
       { nombre: 'Brigada de Evacuación', horas: 4 },
@@ -87,9 +79,7 @@ const grupos = [
     ],
   },
   {
-    id: 'especializados',
-    titulo: 'Cursos Especializados',
-    doble: false,
+    id: 'especializados', titulo: 'Cursos Especializados', doble: false,
     cursos: [
       { nombre: 'Armado y Desmantelado en Andamios Atlas', horas: 8 },
       { nombre: 'Bloqueo y Etiquetado — Lock Out, Tag Out', horas: 8 },
@@ -105,20 +95,23 @@ const grupos = [
 
 function Card({ curso }) {
   return (
-    <div className="w-56 flex-none bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all p-5 flex flex-col justify-between">
+    <div className="w-52 flex-none bg-white rounded-2xl p-5 flex flex-col justify-between transition-all hover:-translate-y-1"
+      style={{border: '1px solid #d1fae5', borderLeft: '4px solid #22c55e', boxShadow: '0 2px 8px rgba(34,197,94,0.06)'}}>
       <div>
-        <div className="inline-block bg-orange-50 text-orange-500 font-black text-lg px-3 py-1 rounded-xl mb-3">
+        <div className="inline-block font-display font-black text-base px-3 py-1 rounded-lg mb-3"
+          style={{background: '#dcfce7', color: '#1a4731'}}>
           {curso.horas} HRS
         </div>
-        <h3 className="font-bold text-[#1a2744] text-sm leading-snug">
+        <h3 className="font-semibold text-sm leading-snug" style={{color: '#0d2b1a'}}>
           {curso.nombre}
         </h3>
       </div>
-      <a
-        href={getWhatsAppLink(`Hola, quiero información y cotización del curso: ${curso.nombre} (${curso.horas} hrs)`)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-4 block w-full text-center bg-[#1a2744] hover:bg-orange-500 text-white font-semibold text-xs py-2.5 rounded-xl transition-colors">
+      <a href={getWhatsAppLink(`Hola, quiero información y cotización del curso: ${curso.nombre} (${curso.horas} hrs)`)}
+        target="_blank" rel="noopener noreferrer"
+        className="mt-4 block w-full text-center text-white font-bold text-xs py-2.5 rounded-xl transition-colors"
+        style={{background: '#0d2b1a'}}
+        onMouseOver={e => e.target.style.background='#f97316'}
+        onMouseOut={e => e.target.style.background='#0d2b1a'}>
         Solicitar info →
       </a>
     </div>
@@ -127,20 +120,19 @@ function Card({ curso }) {
 
 export default function CursosGreenPro() {
   return (
-    <section id="cursos" className="bg-[#f8faff] py-20">
+    <section id="cursos" className="py-20" style={{background: '#f0faf4'}}>
       <div className="max-w-7xl mx-auto">
 
-        {/* Encabezado con logo en el cuerpo */}
+        {/* Encabezado */}
         <div className="text-center mb-16 px-6">
-          <img
-            src="/Green_Pro_Logo.jpg"
-            alt="GREEN PRO"
-            className="h-24 mx-auto mb-4 object-contain rounded-2xl shadow-md"
-          />
-          <h2 className="text-3xl md:text-4xl font-black text-[#1a2744] mb-2">
-            Catálogo de Cursos <span className="text-green-600">GREEN PRO</span>
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-xs font-bold tracking-widest uppercase"
+            style={{background: '#dcfce7', color: '#1a4731'}}>
+            📋 Catálogo Oficial GREEN PRO
+          </div>
+          <h2 className="font-display font-black text-5xl mb-3" style={{color: '#0d2b1a', letterSpacing: '-1px'}}>
+            Cursos <span style={{color: '#22c55e'}}>GREEN PRO</span>
           </h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-base">
+          <p style={{color: '#4b7a5e'}} className="max-w-xl mx-auto">
             Selecciona el curso de tu interés y solicita información directo por WhatsApp.
           </p>
         </div>
@@ -149,47 +141,41 @@ export default function CursosGreenPro() {
         <div className="flex flex-col gap-20">
           {grupos.map((grupo, gi) => (
             <div key={grupo.id}>
-
-              {/* Título centrado */}
               <div className="text-center px-6 mb-8">
-                <h2 className="text-3xl md:text-5xl font-black text-[#1a2744]">
+                <h2 className="font-display font-black text-3xl md:text-5xl" style={{color: '#0d2b1a'}}>
                   {grupo.titulo}
                 </h2>
-                <div className="w-16 h-1 bg-orange-500 rounded-full mt-3 mx-auto" />
+                <div className="w-16 h-1 rounded-full mt-3 mx-auto" style={{background: '#22c55e'}} />
               </div>
 
-              {/* DOBLE FILA */}
               {grupo.doble ? (
                 <div className="overflow-x-auto scrollbar-hide px-6 pb-4">
-                  <div className="flex flex-col gap-4" style={{ width: 'max-content' }}>
+                  <div className="flex flex-col gap-4" style={{width: 'max-content'}}>
                     <div className="flex gap-4">
-                      {grupo.cursos.filter((_, i) => i % 2 === 0).map((curso, i) => <Card key={i} curso={curso} />)}
+                      {grupo.cursos.filter((_, i) => i % 2 === 0).map((c, i) => <Card key={i} curso={c} />)}
                     </div>
                     <div className="flex gap-4">
-                      {grupo.cursos.filter((_, i) => i % 2 !== 0).map((curso, i) => <Card key={i} curso={curso} />)}
+                      {grupo.cursos.filter((_, i) => i % 2 !== 0).map((c, i) => <Card key={i} curso={c} />)}
                     </div>
                   </div>
                 </div>
               ) : (
-                /* FILA SIMPLE */
                 <div className="flex gap-4 overflow-x-auto scrollbar-hide px-6 pb-4">
-                  {grupo.cursos.map((curso, i) => <Card key={i} curso={curso} />)}
+                  {grupo.cursos.map((c, i) => <Card key={i} curso={c} />)}
                 </div>
               )}
 
-              {/* Botón cotizar grupo - centrado */}
               <div className="text-center mt-6">
-                <a
-                  href={getWhatsAppLink(`Hola, quiero cotizar el grupo completo de: ${grupo.titulo}`)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold px-6 py-3 rounded-full transition-all text-sm">
+                <a href={getWhatsAppLink(`Hola, quiero cotizar el grupo completo de: ${grupo.titulo}`)}
+                  target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-full transition-all text-sm"
+                  style={{border: '2px solid #22c55e', color: '#1a4731'}}>
                   Cotizar grupo completo →
                 </a>
               </div>
 
               {gi < grupos.length - 1 && (
-                <div className="mx-6 mt-16 border-t border-gray-200" />
+                <div className="mx-6 mt-16" style={{borderTop: '1px solid #d1fae5'}} />
               )}
             </div>
           ))}

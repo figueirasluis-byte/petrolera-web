@@ -7,21 +7,17 @@ const logos = [
 ]
 
 export default function Acreditaciones() {
-  // Triplicamos para que el loop nunca se vea cortado
   const all = [...logos, ...logos, ...logos]
   return (
-    <div className="bg-white border-y border-gray-100 py-8 overflow-hidden">
-      <p className="text-center text-xs font-semibold tracking-widest text-gray-400 uppercase mb-8">
+    <div className="bg-white overflow-hidden py-8" style={{borderTop: '1px solid #d1fae5', borderBottom: '1px solid #d1fae5'}}>
+      <p className="text-center text-xs font-semibold tracking-widest uppercase mb-8" style={{color: '#4b7a5e'}}>
         Acreditaciones y Membresías
       </p>
       <div className="flex gap-20 animate-marquee w-max items-center">
         {all.map((item, i) => (
-          <div key={i} className="flex-none flex items-center justify-center opacity-70 hover:opacity-100 transition-all hover:scale-110">
-            <img
-              src={item.img}
-              alt={item.nombre}
-              className="h-14 w-auto object-contain"
-            />
+          <div key={i} className="flex-none flex items-center gap-3 opacity-60 hover:opacity-100 transition-all hover:scale-105">
+            <div className="w-2 h-2 rounded-full bg-green-400 flex-none" />
+            <img src={item.img} alt={item.nombre} className="h-12 w-auto object-contain" />
           </div>
         ))}
       </div>
