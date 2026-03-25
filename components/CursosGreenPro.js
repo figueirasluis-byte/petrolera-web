@@ -1,3 +1,4 @@
+'use client'
 import { getWhatsAppLink } from '../utils/whatsapp'
 
 const grupos = [
@@ -108,10 +109,8 @@ function Card({ curso }) {
       </div>
       <a href={getWhatsAppLink(`Hola, quiero información y cotización del curso: ${curso.nombre} (${curso.horas} hrs)`)}
         target="_blank" rel="noopener noreferrer"
-        className="mt-4 block w-full text-center text-white font-bold text-xs py-2.5 rounded-xl transition-colors"
-        style={{background: '#0d2b1a'}}
-        onMouseOver={e => e.target.style.background='#f97316'}
-        onMouseOut={e => e.target.style.background='#0d2b1a'}>
+        className="mt-4 block w-full text-center text-white font-bold text-xs py-2.5 rounded-xl transition-colors hover:bg-orange-500"
+        style={{background: '#0d2b1a'}}>
         Solicitar info →
       </a>
     </div>
@@ -122,8 +121,6 @@ export default function CursosGreenPro() {
   return (
     <section id="cursos" className="py-20" style={{background: '#f0faf4'}}>
       <div className="max-w-7xl mx-auto">
-
-        {/* Encabezado */}
         <div className="text-center mb-16 px-6">
           <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-xs font-bold tracking-widest uppercase"
             style={{background: '#dcfce7', color: '#1a4731'}}>
@@ -137,7 +134,6 @@ export default function CursosGreenPro() {
           </p>
         </div>
 
-        {/* Grupos */}
         <div className="flex flex-col gap-20">
           {grupos.map((grupo, gi) => (
             <div key={grupo.id}>
@@ -168,7 +164,7 @@ export default function CursosGreenPro() {
               <div className="text-center mt-6">
                 <a href={getWhatsAppLink(`Hola, quiero cotizar el grupo completo de: ${grupo.titulo}`)}
                   target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-full transition-all text-sm"
+                  className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-full transition-all text-sm hover:bg-green-500 hover:text-white"
                   style={{border: '2px solid #22c55e', color: '#1a4731'}}>
                   Cotizar grupo completo →
                 </a>
