@@ -5,10 +5,8 @@ import { getWhatsAppLink } from '../utils/whatsapp'
 const links = [
   { label: 'Capacitación', href: '#calendario' },
   { label: 'Cursos', href: '#cursos' },
-  { label: 'Inspección', href: '#inspeccion' },
   { label: 'Conocer', href: '#conocer' },
   { label: 'Consultoría', href: '#consultoria' },
-  { label: 'Renta', href: '#renta' },
 ]
 
 export default function Navbar() {
@@ -28,8 +26,6 @@ export default function Navbar() {
         : 'bg-[#0f1e3c]/80 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-
-        {/* Logo */}
         <a href="#" className="flex items-center">
           <img
             src="/Green_Pro_Logo.jpg"
@@ -38,26 +34,23 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Links desktop */}
         <ul className="hidden lg:flex items-center gap-8">
           {links.map(l => (
             <li key={l.href}>
               <a href={l.href}
-                className="text-white/80 hover:text-white text-sm font-semibold tracking-wide transition-colors hover:text-orange-400">
+                className="text-white/80 hover:text-orange-400 text-sm font-semibold tracking-wide transition-colors">
                 {l.label}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Botón CTA */}
         <a href={getWhatsAppLink("Hola, quiero agendar una cita con GREEN PRO")}
           target="_blank" rel="noopener noreferrer"
           className="hidden lg:inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg shadow-orange-500/30 hover:-translate-y-0.5">
           Agendar Cita →
         </a>
 
-        {/* Hamburguesa móvil */}
         <button onClick={() => setOpen(!open)} className="lg:hidden p-2 flex flex-col gap-1.5">
           <span className="w-6 h-0.5 bg-white block" />
           <span className="w-6 h-0.5 bg-white block" />
@@ -65,7 +58,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Menú móvil */}
       {open && (
         <div className="lg:hidden bg-[#0f1e3c] border-t border-white/10 px-6 py-5 flex flex-col gap-4">
           {links.map(l => (
