@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import Acreditaciones from '../components/Acreditaciones'
 import Calendario from '../components/Calendario'
 import Promociones from '../components/Promociones'
-import CursosElearning from '../components/CursosElearning'
+import CursosGreenPro from '../components/CursosGreenPro'
 import Inspeccion from '../components/Inspeccion'
 import Conocer from '../components/Conocer'
 import Consultoria from '../components/Consultoria'
@@ -21,7 +21,7 @@ export default function Home() {
       <Acreditaciones />
       <Calendario />
       <Promociones />
-      <CursosElearning />
+      <CursosGreenPro />
       <Inspeccion />
       <Conocer />
       <Consultoria />
