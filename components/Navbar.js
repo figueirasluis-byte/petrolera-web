@@ -42,7 +42,8 @@ export default function Navbar() {
 
         <a href={getWhatsAppLink("Hola, quiero agendar una cita con GREEN PRO")}
           target="_blank" rel="noopener noreferrer"
-          className="hidden lg:inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white font-bold text-sm px-6 py-3 rounded-full transition-all shadow-lg shadow-orange-500/30 hover:-translate-y-0.5">
+          className="hidden lg:inline-flex items-center gap-2 text-white font-bold text-sm px-6 py-3 rounded-full transition-all hover:brightness-110 hover:-translate-y-0.5"
+          style={{background: '#22c55e', boxShadow: '0 4px 16px rgba(34,197,94,0.3)'}}>
           Agendar Cita →
         </a>
 
@@ -61,7 +62,8 @@ export default function Navbar() {
           ))}
           <a href={getWhatsAppLink("Hola, quiero agendar una cita con GREEN PRO")}
             target="_blank" rel="noopener noreferrer"
-            className="bg-orange-500 text-white font-bold text-sm px-5 py-3 rounded-full text-center mt-2">
+            className="text-white font-bold text-sm px-5 py-3 rounded-full text-center mt-2"
+            style={{background: '#22c55e'}}>
             Agendar Cita →
           </a>
         </div>

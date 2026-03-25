@@ -50,13 +50,13 @@ export default function Footer() {
             <div className="flex flex-col gap-3">
               <a href={getWhatsAppLink("Hola, quiero agendar una cita con GREEN PRO")}
                 target="_blank" rel="noopener noreferrer"
-                className="block text-center text-white font-semibold py-3 rounded-xl transition-colors"
-                style={{background: '#f97316'}}>
+                className="block text-center text-white font-semibold py-3 rounded-xl transition-all hover:brightness-110"
+                style={{background: '#22c55e', boxShadow: '0 4px 16px rgba(34,197,94,0.25)'}}>
                 Agendar Cita →
               </a>
               <a href={getWhatsAppLink("Hola, quiero solicitar una cotización a GREEN PRO")}
                 target="_blank" rel="noopener noreferrer"
-                className="block text-center font-semibold py-3 rounded-xl transition-colors text-sm"
+                className="block text-center font-semibold py-3 rounded-xl transition-colors text-sm hover:border-green-400 hover:text-green-400"
                 style={{border: '1px solid rgba(34,197,94,0.3)', color: 'rgba(255,255,255,0.7)'}}>
                 Solicitar Cotización
               </a>
